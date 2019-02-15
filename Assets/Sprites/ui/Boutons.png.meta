@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: c7be2f21a6f8c314783111bfa1a157c3
+guid: 252e5525e1dd3f44a9a8fd467a69c6c5
 TextureImporter:
   fileIDToRecycleName:
-    21300000: EC_drops_water_0
-    21300002: EC_drops_water_1
-    21300004: EC_drops_water_2
-    21300006: EC_drops_water_3
+    21300000: Boutons_0
+    21300002: Boutons_1
+    21300004: Boutons_2
+    21300006: Boutons_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -49,7 +49,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 2048
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -88,13 +88,53 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EC_drops_water_0
+      name: Boutons_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 587
+        width: 1578
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bfa67fd71c4efd4db30f1798e401ce5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_1
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 587
+        width: 1578
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e2cc7348b31aa4bb6853a83768e935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 512
+        width: 1578
+        height: 587
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -102,19 +142,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e00512cfa669734bae3ff0c796f92c6
+      spriteID: fadbe142dee64e640abdb04482695c28
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EC_drops_water_1
+      name: Boutons_3
       rect:
         serializedVersion: 2
-        x: 512
+        x: 1578
         y: 0
-        width: 512
-        height: 512
+        width: 1578
+        height: 587
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,47 +162,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0e783c76d6e885458ad14fe603f5899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EC_drops_water_2
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4cba82d04a27e8343a8421207c4cf3b1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EC_drops_water_3
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19e4b7afe94d4164192478b24d6161cf
+      spriteID: 694b454cf98971d4fb99aa17863282b5
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 08ce78ce8fc658f45a9872b3153fc28e
+    spriteID: e856d6f01e92b5f46bd55102991c45b3
     vertices: []
     indices: 
     edges: []

@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - People
+  - Cloud
+  - Beam
+  - Drop
   layers:
   - Default
   - TransparentFX
@@ -40,4 +45,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Building
+    uniqueID: 157791903
+    locked: 0
+  - name: People
+    uniqueID: 2983734161
+    locked: 0
+  - name: Drop
+    uniqueID: 2722220553
+    locked: 0
+  - name: Cloud
+    uniqueID: 3091994951
+    locked: 0
+  - name: Beam
+    uniqueID: 1772624243
     locked: 0

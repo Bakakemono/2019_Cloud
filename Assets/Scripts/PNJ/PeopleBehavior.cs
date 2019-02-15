@@ -34,4 +34,17 @@ public class PeopleBehavior : MonoBehaviour
             customTransform.position = Vector3.MoveTowards(customTransform.position, left, speed * Time.deltaTime);
         }
     }
+
+    void OnTriggerEnter2D(Collider2D collider2D)
+    {
+        if (collider2D.gameObject.tag == "Drop")
+            Hit();
+
+    }
+
+    void Hit()
+    {
+        Debug.Log("ail");
+    }
+    
 }
