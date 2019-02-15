@@ -5,8 +5,9 @@ using UnityEngine;
 public class PeopleBehavior : MonoBehaviour
 {
     private Transform customTransform;
+    private SpriteRenderer spriteRenderer;
 
-    [SerializeField] private float speed = 1.0f;
+    [SerializeField] public float speed = 1.0f;
 
     [SerializeField] private Vector2 left = new Vector2(-10, -4);
     [SerializeField] private Vector2 right = new Vector2(10, -4);
@@ -16,15 +17,22 @@ public class PeopleBehavior : MonoBehaviour
     void Start()
     {
         customTransform = GetComponent<Transform>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
         if (goRight)
+        {
+            spriteRenderer.flipX = true;
             customTransform.position = Vector3.MoveTowards(customTransform.position, right, speed * Time.deltaTime);
-        else
-            customTransform.position = Vector3.MoveTowards(customTransform.position, left, speed * Time.deltaTime);
+        }
 
+        else
+        {
+            spriteRenderer.flipX = false;
+            customTransform.position = Vector3.MoveTowards(customTransform.position, left, speed * Time.deltaTime);
+        }
     }
 
     void OnDrawGizmos()
