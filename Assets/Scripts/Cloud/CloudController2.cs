@@ -44,8 +44,6 @@ public class CloudController2 : MonoBehaviour
 
         CapSpeed();
         Slow();
-
-        Debug.Log(rigidBody2D.velocity);
     }
 
     private void CapSpeed()
