@@ -34,17 +34,4 @@ public class PeopleBehavior : MonoBehaviour
             customTransform.position = Vector3.MoveTowards(customTransform.position, left, speed * Time.deltaTime);
         }
     }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.black;
-
-        Gizmos.DrawSphere(left, 0.2f);
-        Gizmos.DrawSphere(right, 0.2f);
-
-        Gizmos.color = Color.red;
-
-        Gizmos.DrawLine(left, right);
-
-    }
 }
