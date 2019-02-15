@@ -21,9 +21,22 @@ public class PeopleBehavior : MonoBehaviour
     void Update()
     {
         if (goRight)
-            customTransform.position = Vector3.MoveTowards(customTransform.position, right, speed);
+            customTransform.position = Vector3.MoveTowards(customTransform.position, right, speed * Time.deltaTime);
         else
-            customTransform.position = Vector3.MoveTowards(customTransform.position, left, speed);
+            customTransform.position = Vector3.MoveTowards(customTransform.position, left, speed * Time.deltaTime);
+
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.black;
+
+        Gizmos.DrawSphere(left, 0.2f);
+        Gizmos.DrawSphere(right, 0.2f);
+
+        Gizmos.color = Color.red;
+
+        Gizmos.DrawLine(left, right);
 
     }
 }
