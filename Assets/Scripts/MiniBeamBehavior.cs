@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BeamBehavior : MonoBehaviour
+public class MiniBeamBehavior : MonoBehaviour
 {
     private float nmb = 0;
     private SpriteRenderer spriteRenderer;
@@ -27,7 +27,7 @@ public class BeamBehavior : MonoBehaviour
     [SerializeField] private AnimationCurve curveBeam;
     [SerializeField] private AnimationCurve beamFadeOut;
 
-    private PraiseTheSunBehavior adepte;
+    private PraiseTheSonAdepteBehavior solaire;
 
     [SerializeField] private Collider2D damageArea;
 
@@ -36,7 +36,7 @@ public class BeamBehavior : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         customTransform = GetComponent<Transform>();
         customTransform.localScale = new Vector3(curveBeam.Evaluate(0) * 0.6f, customTransform.localScale.y);
-        
+
     }
 
     void Update()
@@ -51,7 +51,7 @@ public class BeamBehavior : MonoBehaviour
 
         if (isArrived && !isBeamed)
         {
-            customTransform.localScale = new Vector2(curveBeam.Evaluate(landingTime) * 0.6f, 1);
+            customTransform.localScale = new Vector2(curveBeam.Evaluate(landingTime) * 0.2f, 1);
 
 
 
@@ -86,15 +86,15 @@ public class BeamBehavior : MonoBehaviour
 
         if (spriteRenderer.color.a <= 0)
         {
-            adepte.BackToWalk();
+            solaire.BackToWalk();
             Destroy(gameObject);
         }
-        
+
     }
 
-    public void GetPraiseTheSunBehavior(PraiseTheSunBehavior adepte)
+    public void GetPraiseTheSunBehavior(PraiseTheSonAdepteBehavior solaire)
     {
-        this.adepte = adepte;
+        this.solaire = solaire;
     }
 
     void OnTriggerEnter2D(Collider2D collider2D)
@@ -105,6 +105,4 @@ public class BeamBehavior : MonoBehaviour
             landingTime = 0;
         }
     }
-
-
 }

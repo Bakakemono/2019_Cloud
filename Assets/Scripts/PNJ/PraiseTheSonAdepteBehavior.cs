@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Transactions;
 using UnityEngine;
 
-public class PraiseTheSunBehavior : MonoBehaviour
+public class PraiseTheSonAdepteBehavior : MonoBehaviour
 {
     private float speed = 1.0f;
     private Vector2 target = new Vector2(0, -3.77f);
@@ -18,7 +17,7 @@ public class PraiseTheSunBehavior : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
-    [SerializeField] private GameObject SunBeam;
+    [SerializeField] private GameObject MiniSunBeam;
 
     private Animator animator;
 
@@ -85,8 +84,8 @@ public class PraiseTheSunBehavior : MonoBehaviour
 
     private void TimeToSunYourLovelyFace()
     {
-        GameObject solarBeam = Instantiate(SunBeam, new Vector3(customTransform.position.x, 20, 0), Quaternion.identity);
-        solarBeam.GetComponent<BeamBehavior>().GetPraiseTheSunBehavior(this);
+        GameObject solarBeam = Instantiate(MiniSunBeam, new Vector3(customTransform.position.x, 20, 0), Quaternion.identity);
+        solarBeam.GetComponent<MiniBeamBehavior>().GetPraiseTheSunBehavior(this);
     }
 
     public void BackToWalk()
@@ -101,5 +100,4 @@ public class PraiseTheSunBehavior : MonoBehaviour
 
         target = new Vector2(Random.value * 16 - 8, target.y);
     }
-
 }

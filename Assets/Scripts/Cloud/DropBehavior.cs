@@ -18,9 +18,9 @@ public class DropBehavior : MonoBehaviour
     {
         if (stop)
         {
-            rigidbody2D.bodyType = RigidbodyType2D.Static;
             rigidbody2D.velocity = new Vector2(0, 0);
-
+            rigidbody2D.bodyType = RigidbodyType2D.Static;
+            stop = false;
         }
     }
 
