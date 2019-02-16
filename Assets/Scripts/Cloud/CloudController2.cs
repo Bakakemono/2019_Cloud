@@ -24,6 +24,7 @@ public class CloudController2 : MonoBehaviour
     [SerializeField] private Vector2 slow = new Vector2(0, 0);
 
     private bool isBufF = false;
+    private bool isDead = false;
     #endregion
 
 
@@ -38,6 +39,9 @@ public class CloudController2 : MonoBehaviour
 
     void Update()
     {
+        if(isDead)
+            return;
+
         input.x = Input.GetAxis("Horizontal");
         input.y = Input.GetAxis("Vertical");
 
@@ -120,9 +124,15 @@ public class CloudController2 : MonoBehaviour
             if (isBufF)
                 isBufF = false;
             else
+            {
                 Die();
-
+            }
         }
+    }
+
+    public void TheEnd()
+    {
+        FindObjectOfType<ScenesManager>().EndScene();
     }
 
 }

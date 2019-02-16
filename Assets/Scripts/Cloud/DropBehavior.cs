@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class DropBehavior : MonoBehaviour
 {
+
+    public enum DropType
+    {
+        BASIC,
+        BEER,
+        OIL,
+        LEMON
+    }
+
+    public DropType dropType = DropType.BASIC;
+
     private Animator animator;
     private Rigidbody2D rigidbody2D;
     private bool stop = false;

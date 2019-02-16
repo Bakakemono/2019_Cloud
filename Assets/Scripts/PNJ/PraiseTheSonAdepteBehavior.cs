@@ -5,9 +5,10 @@ using UnityEngine;
 public class PraiseTheSonAdepteBehavior : MonoBehaviour
 {
     private float speed = 1.0f;
-    private Vector2 target = new Vector2(0, -3.77f);
-    private Vector2 left = new Vector2(-10, -3.77f);
-    private Vector2 right = new Vector2(10, -3.77f);
+    private float high = -3.521f;
+    private Vector2 target;
+    private Vector2 left;
+    private Vector2 right;
 
     public bool goRight = false;
     private bool isMoving = true;
@@ -23,6 +24,8 @@ public class PraiseTheSonAdepteBehavior : MonoBehaviour
 
     void Start()
     {
+        left = new Vector2(-10, high);
+        right = new Vector2(10, high);
         customTransform = GetComponent<Transform>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
@@ -98,6 +101,7 @@ public class PraiseTheSonAdepteBehavior : MonoBehaviour
     {
         this.goRight = goRight;
 
-        target = new Vector2(Random.value * 16 - 8, target.y);
+        float targetX = Random.value * 16f - 8f;
+        target = new Vector2(targetX, high);
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8079186231468989418}
   - component: {fileID: 2166178482195344246}
   - component: {fileID: 3361473697312584202}
+  - component: {fileID: 4688003940695662603}
   m_Layer: 0
   m_Name: WalkingMomFidel
   m_TagString: People
@@ -28,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533309152575402053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.25, y: -2.45, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,8 +96,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 0.8}
+  m_Offset: {x: 0.16224192, y: -0.05337453}
+  m_Size: {x: 0.17551625, y: 0.693251}
   m_Direction: 0
 --- !u!114 &2166178482195344246
 MonoBehaviour:
@@ -132,3 +133,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &4688003940695662603
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533309152575402053}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.11911434, y: -0.32435322}
+  m_Size: {x: 0.23602569, y: 0.35129356}
+  m_Direction: 0

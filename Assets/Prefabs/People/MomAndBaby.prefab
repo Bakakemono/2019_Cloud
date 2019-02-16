@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6452708207957940882}
   - component: {fileID: 4069794732066969868}
   - component: {fileID: 4383441860395225127}
+  - component: {fileID: 947579161548956194}
+  - component: {fileID: 5215995366019475297}
   m_Layer: 0
   m_Name: MomAndBaby
   m_TagString: People
@@ -27,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9163184936383277407}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.8389015, y: -2.5701294, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -94,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  spirit: {fileID: 1870617969149131834, guid: d0fd0f052afca5440af8f2e98f6f3ffe, type: 3}
   goRight: 1
 --- !u!95 &4383441860395225127
 Animator:
@@ -114,3 +117,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &947579161548956194
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9163184936383277407}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.1363025, y: -0.0851547}
+  m_Size: {x: 0.18218641, y: 0.82969064}
+  m_Direction: 0
+--- !u!70 &5215995366019475297
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9163184936383277407}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.15334001, y: -0.32358775}
+  m_Size: {x: 0.21626207, y: 0.35282454}
+  m_Direction: 0

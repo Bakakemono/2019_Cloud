@@ -130,7 +130,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1202972345
   m_SortingLayer: 5
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 11ec2919de31ea2458d11f83b11475cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basicDrop: {fileID: 5224556927035228276, guid: d0e955b26c5b6234b938a93f89b626d1,
     type: 3}
-  dropRate: 20
+  dropRate: 40
   MAX_BASIC_DROP_CAPACITY: 100
   currentBasicDropInventory: 0
 --- !u!95 &4303619227269880284
@@ -231,7 +231,7 @@ Animator:
   m_GameObject: {fileID: 2339486910190018633}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 27c2f664ae564dc4ebfe220510dc9829, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

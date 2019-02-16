@@ -6,20 +6,25 @@ public class PeopleBehavior : MonoBehaviour
 {
     private Transform customTransform;
     private SpriteRenderer spriteRenderer;
+    private GameManager gameManager;
 
     [SerializeField] public float speed = 1.0f;
 
-    private Vector2 left = new Vector2(-10, -3.77f);
-    private Vector2 right = new Vector2(10, -3.77f);
+    private float high = -3.521f;
+    private Vector2 left;
+    private Vector2 right;
 
-    
+    [SerializeField] private GameObject spirit;
 
     public bool goRight = false;
 
     void Start()
     {
+        left = new Vector2(-10, high);
+        right = new Vector2(10, high);
         customTransform = GetComponent<Transform>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     void Update()
@@ -45,8 +50,19 @@ public class PeopleBehavior : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider2D)
     {
-        if (collider2D.gameObject.tag == "Drop")
-            Hit();
+        if (collider2D.tag == "Drop")
+        {
+            if (collider2D.GetComponent<DropBehavior>().dropType == DropBehavior.DropType.OIL)
+            {
+                speed *= 3;
+                gameManager.ScoreUp(500);
+            }
+            else
+            {
+                Hit();
+                Destroy(collider2D);
+            }
+        }
     }
 
     public void GetTarget(bool goRight)
@@ -56,7 +72,10 @@ public class PeopleBehavior : MonoBehaviour
 
     void Hit()
     {
-        Debug.Log("ail");
+        gameManager.ScoreUp(100);
+        Instantiate(spirit, customTransform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
+    
     
 }

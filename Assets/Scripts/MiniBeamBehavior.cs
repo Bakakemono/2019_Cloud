@@ -33,7 +33,7 @@ public class MiniBeamBehavior : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         customTransform = GetComponent<Transform>();
-        customTransform.localScale = new Vector3(curveBeam.Evaluate(0) * 0.3f, customTransform.localScale.y);
+        customTransform.localScale = new Vector3(curveBeam.Evaluate(0) * 0.1f, customTransform.localScale.y);
 
     }
 

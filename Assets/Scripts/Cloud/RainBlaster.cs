@@ -15,7 +15,7 @@ public class RainBlaster : MonoBehaviour
 
     private bool isRecovery = false;
 
-    private bool isReloading = false;
+    public bool isReloading = false;
 
     private int reload = 0;
 

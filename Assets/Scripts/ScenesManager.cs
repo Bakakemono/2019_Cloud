@@ -14,4 +14,10 @@ public class ScenesManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void EndScene()
+    {
+        SceneManager.LoadScene("EndScene");
+
+    }
 }
