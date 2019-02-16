@@ -170,9 +170,10 @@ GameObject:
   - component: {fileID: 3900023961016391339}
   - component: {fileID: 6871818051186081531}
   - component: {fileID: 2710541057626545453}
+  - component: {fileID: 4450438563930453051}
   - component: {fileID: 3120943321141728542}
   m_Layer: 0
-  m_Name: SolarBeam 1
+  m_Name: miniSolarBeam
   m_TagString: Beam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -296,8 +297,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 1
     - serializedVersion: 3
-      time: 0.49623585
-      value: 1.0187392
+      time: 0.33119678
+      value: 1.0198569
       inSlope: 0.051036034
       outSlope: 0.051036034
       tangentMode: 0
@@ -320,8 +321,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1.7851826
-      value: 0.7382351
+      time: 0.4591328
+      value: 0.22547877
       inSlope: -0.54852337
       outSlope: -0.54852337
       tangentMode: 0
@@ -334,6 +335,78 @@ MonoBehaviour:
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  damageArea: {fileID: 5347944131341949559}
+--- !u!114 &4450438563930453051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6971143447486500324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb1389b8317b0458b8eef13c55269d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BeamLandingBoomRenderer: {fileID: 5236320228692887297}
+  frontBeam: {fileID: 2087869952418019031}
+  curveBeam:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0055632824
+      value: 0.20757577
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.16550767
+      value: 1.0212121
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  beamFadeOut:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0139082065
+      value: 1.0090909
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.3901738
+      value: 0.7685231
+      inSlope: -1.7977831
+      outSlope: -1.7977831
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7797101
+      value: -0.056681216
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
@@ -374,7 +447,7 @@ GameObject:
   - component: {fileID: 5347944131341949559}
   m_Layer: 0
   m_Name: damagerArea
-  m_TagString: Untagged
+  m_TagString: Beam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

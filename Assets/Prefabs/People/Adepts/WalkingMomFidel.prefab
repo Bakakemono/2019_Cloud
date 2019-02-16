@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3842602240519714548}
   - component: {fileID: 5294043401660517717}
-  - component: {fileID: 416701463280348373}
   - component: {fileID: 8079186231468989418}
+  - component: {fileID: 2166178482195344246}
   - component: {fileID: 3361473697312584202}
   m_Layer: 0
   m_Name: WalkingMomFidel
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533309152575402053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.03, y: -2.52, z: 0}
+  m_LocalPosition: {x: -10.25, y: -2.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,20 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &416701463280348373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1533309152575402053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39961cd4c4ebde447a2c53af92201101, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goRight: 1
-  SunBeam: {fileID: 6971143447486500324, guid: 37df6c7fb6ad96a46adaca9f69c03618, type: 3}
 --- !u!70 &8079186231468989418
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -112,6 +98,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 0.8}
   m_Direction: 0
+--- !u!114 &2166178482195344246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533309152575402053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d04b900ee40f4a4e95604b87c541292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goRight: 0
+  MiniSunBeam: {fileID: 6971143447486500324, guid: 37df6c7fb6ad96a46adaca9f69c03618,
+    type: 3}
 --- !u!95 &3361473697312584202
 Animator:
   serializedVersion: 3
@@ -122,7 +123,7 @@ Animator:
   m_GameObject: {fileID: 1533309152575402053}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b6361d75ace361a4c9fe18c6dcd085e8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3e020e460799d7e4fa9133fcf1ad6737, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

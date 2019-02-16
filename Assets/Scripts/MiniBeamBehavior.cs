@@ -16,8 +16,6 @@ public class MiniBeamBehavior : MonoBehaviour
 
     private float landingTime = 0.0f;
 
-    private float targetScale = 0.8f;
-
     private bool isArrived = false;
     private bool isBeamed = false;
 
@@ -27,7 +25,7 @@ public class MiniBeamBehavior : MonoBehaviour
     [SerializeField] private AnimationCurve curveBeam;
     [SerializeField] private AnimationCurve beamFadeOut;
 
-    private PraiseTheSonAdepteBehavior solaire;
+    private PraiseTheSonAdepteBehavior adepte;
 
     [SerializeField] private Collider2D damageArea;
 
@@ -35,7 +33,7 @@ public class MiniBeamBehavior : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         customTransform = GetComponent<Transform>();
-        customTransform.localScale = new Vector3(curveBeam.Evaluate(0) * 0.6f, customTransform.localScale.y);
+        customTransform.localScale = new Vector3(curveBeam.Evaluate(0) * 0.3f, customTransform.localScale.y);
 
     }
 
@@ -86,15 +84,15 @@ public class MiniBeamBehavior : MonoBehaviour
 
         if (spriteRenderer.color.a <= 0)
         {
-            solaire.BackToWalk();
+            adepte.BackToWalk();
             Destroy(gameObject);
         }
 
     }
 
-    public void GetPraiseTheSunBehavior(PraiseTheSonAdepteBehavior solaire)
+    public void GetPraiseTheSunBehavior(PraiseTheSonAdepteBehavior adepte)
     {
-        this.solaire = solaire;
+        this.adepte = adepte;
     }
 
     void OnTriggerEnter2D(Collider2D collider2D)
