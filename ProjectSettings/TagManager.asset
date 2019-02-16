@@ -55,9 +55,15 @@ TagManager:
   - name: Drop
     uniqueID: 2722220553
     locked: 0
+  - name: Beam
+    uniqueID: 1772624243
+    locked: 0
   - name: Cloud
     uniqueID: 3091994951
     locked: 0
-  - name: Beam
-    uniqueID: 1772624243
+  - name: BeamFront
+    uniqueID: 2094761441
+    locked: 0
+  - name: Ground
+    uniqueID: 1427697263
     locked: 0

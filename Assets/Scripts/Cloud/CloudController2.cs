@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 public class CloudController2 : MonoBehaviour
@@ -9,6 +10,7 @@ public class CloudController2 : MonoBehaviour
     private Transform customTransform;
     private Rigidbody2D rigidBody2D;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     #endregion
 
@@ -21,6 +23,7 @@ public class CloudController2 : MonoBehaviour
     private Vector2 maxSpeed = new Vector2(1, 1);
     [SerializeField] private Vector2 slow = new Vector2(0, 0);
 
+    private bool isBufF = false;
     #endregion
 
 
@@ -29,6 +32,7 @@ public class CloudController2 : MonoBehaviour
         customTransform = GetComponent<Transform>();
         rigidBody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         maxSpeed = baseMaxSpeed;
     }
 
@@ -102,6 +106,23 @@ public class CloudController2 : MonoBehaviour
         }
 
         rigidBody2D.velocity = actualSpeed;
+    }
+
+    void Die()
+    {
+        animator.SetTrigger("Die");
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Beam")
+        {
+            if (isBufF)
+                isBufF = false;
+            else
+                Die();
+
+        }
     }
 
 }
