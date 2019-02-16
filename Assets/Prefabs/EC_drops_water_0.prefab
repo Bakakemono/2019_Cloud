@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 659134099689732219}
   - component: {fileID: 558249870510191255}
   - component: {fileID: 8026274315175080261}
+  - component: {fileID: 747415035973784256}
   m_Layer: 0
   m_Name: EC_drops_water_0
   m_TagString: Drop
@@ -68,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1572746743
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c7be2f21a6f8c314783111bfa1a157c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -131,3 +132,22 @@ CircleCollider2D:
   m_Offset: {x: -0.004, y: -0.06}
   serializedVersion: 2
   m_Radius: 0.045
+--- !u!95 &747415035973784256
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5224556927035228276}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1a999a6729436c42af1def8b93b037f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
