@@ -97,6 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   spirit: {fileID: 1870617969149131834, guid: d0fd0f052afca5440af8f2e98f6f3ffe, type: 3}
+  LemonSpirit: {fileID: 9197781637392215008, guid: 462e8bf502a87af42a63fe32daf0b3db,
+    type: 3}
   goRight: 1
 --- !u!95 &8113304296470274799
 Animator:

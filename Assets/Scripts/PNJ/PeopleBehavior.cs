@@ -15,6 +15,8 @@ public class PeopleBehavior : MonoBehaviour
     private Vector2 right;
 
     [SerializeField] private GameObject spirit;
+    [SerializeField] private GameObject LemonSpirit;
+
 
     public bool goRight = false;
 
@@ -73,7 +75,16 @@ public class PeopleBehavior : MonoBehaviour
     void Hit()
     {
         gameManager.ScoreUp(100);
-        Instantiate(spirit, customTransform.position, Quaternion.identity);
+        GameObject newSpirit;
+        if (Random.Range(0, 100) <= 10)
+        {
+            newSpirit = LemonSpirit;
+        }
+        else
+        {
+            newSpirit = spirit;
+        }
+        Instantiate(newSpirit, customTransform.position, Quaternion.identity);
         Destroy(gameObject);
     }
     

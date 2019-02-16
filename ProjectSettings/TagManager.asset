@@ -9,6 +9,7 @@ TagManager:
   - Cloud
   - Beam
   - Drop
+  - LemonSpirit
   layers:
   - Default
   - TransparentFX

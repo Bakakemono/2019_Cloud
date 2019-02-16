@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.U2D;
 using UnityEngine;
 
 public class SpiritBehavior : MonoBehaviour
