@@ -82,6 +82,8 @@ public class RainBlaster : MonoBehaviour
             }
         }
 
+        FirePowerUpDrop();
+
         reload++;
 
         if (currentBasicDropInventory < MAX_BASIC_DROP_CAPACITY && reload >= reloadGoal)
@@ -133,30 +135,15 @@ public class RainBlaster : MonoBehaviour
         {
             case PowerUp.LEMON:
                 DropToSpawn = lemonDrop;
-                powerUpDropRate = 10.0f;
-                MAX_POWERUP_DROP_CAPACITY = 50.0f;
-                powerUpRange = 4;
                 break;
 
             case PowerUp.BEER:
                 DropToSpawn = beerDrop;
-                powerUpDropRate = 50;
-                MAX_POWERUP_DROP_CAPACITY = 500;
-                powerUpRange = 8;
                 break;
 
             case PowerUp.OIL:
                 DropToSpawn = oilDrop;
-                powerUpDropRate = 5;
-                MAX_POWERUP_DROP_CAPACITY = 40;
-                powerUpRange = 8;
                 break;
-        }
-
-        if (gotAnewOne)
-        {
-            gotAnewOne = false;
-            currentPowerupDropInventory = MAX_POWERUP_DROP_CAPACITY;
         }
 
 
@@ -178,8 +165,37 @@ public class RainBlaster : MonoBehaviour
 
         if (!isPowerUp)
             powerUp = PowerUp.NONE;
+    }
 
 
+    private void SetupPowerUp()
+    {
+        switch (powerUp)
+        {
+            case PowerUp.LEMON:
+                powerUpDropRate = 10.0f;
+                MAX_POWERUP_DROP_CAPACITY = 50.0f;
+                powerUpRange = 4;
+                break;
+
+            case PowerUp.BEER:
+                powerUpDropRate = 50;
+                MAX_POWERUP_DROP_CAPACITY = 500;
+                powerUpRange = 8;
+                break;
+
+            case PowerUp.OIL:
+                powerUpDropRate = 5;
+                MAX_POWERUP_DROP_CAPACITY = 40;
+                powerUpRange = 8;
+                break;
+        }
+
+        if (gotAnewOne)
+        {
+            gotAnewOne = false;
+            currentPowerupDropInventory = MAX_POWERUP_DROP_CAPACITY;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -189,8 +205,10 @@ public class RainBlaster : MonoBehaviour
             Destroy(col.gameObject);
             previousStat = powerUp;
             powerUp = PowerUp.LEMON;
+            isPowerUp = true;
 
             gotAnewOne = true;
+            SetupPowerUp();
         }
         
     }

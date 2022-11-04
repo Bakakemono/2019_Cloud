@@ -8,15 +8,13 @@ using Debug = System.Diagnostics.Debug;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Image dropBare;
+    [SerializeField] private Image normaldropBare;
 
-    [SerializeField] private Image specialDropBare;
+    [SerializeField] private Image beerDropBar;
 
-    [SerializeField] private Sprite beerDropBar;
+    [SerializeField] private Image oliveOilDropBar;
 
-    [SerializeField] private Sprite OliveOilDropBar;
-
-    [SerializeField] private Sprite LemonJuiceDropBar;
+    [SerializeField] private Image lemonJuiceDropBar;
 
 
     [SerializeField] private RainBlaster rainBlaster;
@@ -27,40 +25,40 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        dropBare.fillAmount = (rainBlaster.currentBasicDropInventory / rainBlaster.MAX_BASIC_DROP_CAPACITY);
+        normaldropBare.fillAmount = (rainBlaster.currentBasicDropInventory / rainBlaster.MAX_BASIC_DROP_CAPACITY);
         score.text = scoreCount.ToString();
 
         if (rainBlaster.isReloading)
         {
-            dropBare.color = Color.grey;
+            normaldropBare.color = Color.grey;
         }
         else
         {
-            dropBare.color = Color.white;
+            normaldropBare.color = Color.white;
         }
 
         if (rainBlaster.powerUp != RainBlaster.PowerUp.NONE)
         {
-            specialDropBare.enabled = true;
             switch (rainBlaster.powerUp)
             {
                 case RainBlaster.PowerUp.LEMON:
-                    specialDropBare.sprite = LemonJuiceDropBar;
+                    lemonJuiceDropBar.fillAmount = Mathf.MoveTowards(lemonJuiceDropBar.fillAmount, (rainBlaster.currentPowerupDropInventory / rainBlaster.MAX_POWERUP_DROP_CAPACITY), 0.1f);
                     break;
                 case RainBlaster.PowerUp.BEER:
-                    specialDropBare.sprite = beerDropBar;
+                    beerDropBar.fillAmount =
+                        (rainBlaster.currentPowerupDropInventory / rainBlaster.MAX_POWERUP_DROP_CAPACITY);
                     break;
                 case RainBlaster.PowerUp.OIL:
-                    specialDropBare.sprite = OliveOilDropBar;
+                    oliveOilDropBar.fillAmount =
+                        (rainBlaster.currentPowerupDropInventory / rainBlaster.MAX_POWERUP_DROP_CAPACITY);
                     break;
             }
-
-            specialDropBare.fillAmount =
-                (rainBlaster.currentPowerupDropInventory / rainBlaster.MAX_POWERUP_DROP_CAPACITY);
         }
         else
         {
-            specialDropBare.enabled = false;
+            lemonJuiceDropBar.fillAmount = 0;
+            beerDropBar.fillAmount = 0;
+            oliveOilDropBar.fillAmount = 0;
         }
 
     }

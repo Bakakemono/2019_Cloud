@@ -216,11 +216,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c55ba0a508bb91439f1ba4c023562ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUp: 3
   basicDrop: {fileID: 5224556927035228276, guid: d0e955b26c5b6234b938a93f89b626d1,
     type: 3}
+  lemonDrop: {fileID: 5356149662278416653, guid: adaa441e9f51063428d68f412be860dc,
+    type: 3}
+  oilDrop: {fileID: 8956717405688060375, guid: 01ef8e5ceb3b85c418d2a8a9067d1311, type: 3}
+  beerDrop: {fileID: 5356149662278416653, guid: bda885a2387e40247a482c4a674269de,
+    type: 3}
   dropRate: 40
+  isReloading: 0
   MAX_BASIC_DROP_CAPACITY: 100
   currentBasicDropInventory: 0
+  MAX_POWERUP_DROP_CAPACITY: 50
+  currentPowerupDropInventory: 0
 --- !u!95 &4303619227269880284
 Animator:
   serializedVersion: 3
